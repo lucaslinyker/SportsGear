@@ -305,3 +305,74 @@ body {
     text-decoration: underline;
     scale: 1.02;
 }
+
+.main__best-sellers {
+    margin-block: var(--space1, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.best-sellers__title {
+    margin-bottom: var(--space3, 10px);
+}
+
+.best-sellers__nav {
+    margin-bottom: var(--space1, 40px);
+}
+
+.nav__link--selected {
+    color: var(--color3);
+}
+
+.best-sellers__products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space1, 40px);
+    justify-content: space-between;
+}
+
+.product__title {
+    height: 23px;
+}
+
+.product__price {
+    height: var(--space2, 20px);
+}
+
+.product--tag {
+    position: relative;
+}
+
+.product {
+    text-decoration: none;
+    color: var(--color0);
+}
+
+.product__image {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    transition: all .1s linear;
+}
+
+.product__image:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+    height: 91%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius2, 5px);
+}
+
+.product__tag {
+    position: absolute;
+    top: var(--space2, 20px);
+    left: 0;
+    padding: var(--space3, 10px);
+    color: var(--color5);
+    background-color: var(--color2);
+    border-radius: 0 var(--border-radius2, 5px) var(--border-radius2, 5px) 0;
+}

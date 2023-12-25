@@ -21,30 +21,55 @@
 
     <header class="header">
         <div class="header__content">
-            <h1 class="header__title" translate="no">Sports Gear</h1>
-            <nav class="nav">
+            <a class="content__link" href="">
+                <!--  HACK:  como ainda não tem logo, coloquei só o nome -->
+                <h1 class="content__title" translate="no">Sports Gear</h1>
+            </a>
+
+            <nav class="content__nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#">masculino</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">feminino</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">criança</a></li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#masc">Masculino</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#fem">Feminino</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#kid">Infantil</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <div class="user-actions">
-            <nav class="user-nav">
-                <ul class="user-nav__list">
-                    <li class="user-nav__item"><a class="user-nav__link" href="#">entrar</a></li>
-                    <li class="user-nav__item">|</li>
-                    <li class="user-nav__item"><a class="user-nav__link" href="#">criar conta</a></li>
+
+        <div class="header__user-actions">
+            <nav class="user-actions__nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--pipe">
+                        <a class="nav__link" href="#login">Entrar</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#signup">Criar conta</a>
+                    </li>
                 </ul>
             </nav>
+
             <div class="search-cart">
-                <div class="search-cart__icon">
-                    <i class="icon fa-solid fa-magnifying-glass"></i>
+                <div class="search__field">
+                    <label class="search__label" for="input-search">
+                        <i class="search__icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+
+                    <input class="search__input" id="input-search" type="text" placeholder="Buscar">
                 </div>
-                <div class="search-cart__icon">
-                    <i class="icon fa-solid fa-cart-shopping"></i>
-                    <span class="search-cart__icon-number">0</span>
+
+                <div class="cart__filed">
+                    <a class="cart__link" href="#cart">
+                        <i class="cart__icon fa-solid fa-cart-shopping"></i>
+                        <span class="cart__number">0</span>
+                    </a>
                 </div>
             </div>
         </div>

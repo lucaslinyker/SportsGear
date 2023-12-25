@@ -181,3 +181,28 @@ body {
 .cart__link:hover {
     color: var(--color3);
 }
+
+.main {
+    padding: var(--space1) calc(var(--space1) * 2);
+}
+
+.main__features {
+    margin-bottom: var(--space1, 40px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature {
+    display: flex;
+    gap: var(--space3, 10px);
+}
+
+.feature__icon {
+    min-width: var(--space0, 50px);
+    height: var(--space0, 50px);
+    background-color: var(--color4);
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}

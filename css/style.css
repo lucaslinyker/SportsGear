@@ -376,3 +376,65 @@ body {
     background-color: var(--color2);
     border-radius: 0 var(--border-radius2, 5px) var(--border-radius2, 5px) 0;
 }
+
+.main__black-friday {
+    margin-inline: calc((var(--space1, 40px) * 2) * -1);
+    height: 500px;
+    position: relative;
+}
+
+.black-friday__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.black-friday__content {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.black-friday__title {
+    margin-bottom: var(--space2, 20px);
+    font-size: 2.2rem;
+}
+
+.black-friday__countdown {
+    font-size: 3rem;
+    font-weight: 900;
+    display: grid;
+    grid-template-columns: .7fr 13px 1fr 13px 1fr 15px 1fr;
+}
+
+.countdown__num--align {
+    text-align: left;
+}
+
+.countdown__date {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.countdown__date--1 { text-align: left; margin-left: 5px; }
+.countdown__date--2 { grid-column: 3; }
+.countdown__date--3 { grid-column: 5; }
+.countdown__date--4 { grid-column: 7; margin-left: 8px; }
+
+.black-friday__link {
+    display: block;
+    margin-top: var(--space2, 20px);
+    text-decoration: none;
+    color: var(--color5);
+    background-color: var(--color2);
+    padding: var(--space3, 10px) var(--space2, 20px);
+    border-radius: var(--border-radius3, 2px);
+    transition: all .1s linear;
+}
+
+.black-friday__link:hover {
+    background-color: var(--color1);
+    box-shadow: 2px 5px 10px rgba(3, 25, 39, 0.3);
+}

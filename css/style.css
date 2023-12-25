@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color0: #000d16;
+    --color1: #02416d;
+    --color2: #0a5483;
+    --color3: #066699;
+    --color4: #aedd2b;
+    --color5: #f8f8ec;
+
+    --space0: 50px;
+    --space1: 40px;
+    --space2: 20px;
+    --space3: 10px;
+    --space4: 5px;
+    --space5: 2px;
+
+    --border-radius1: 10px;
+    --border-radius2: 5px;
+    --border-radius3: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color5);
+    color: black;
+}
+
+/*  NOTE:  para ocultar barra de navegação */
+/* body::-webkit-scrollbar {
+    scrollbar-width: none;
+    width: 0;
+} */

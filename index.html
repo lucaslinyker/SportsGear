@@ -242,20 +242,49 @@
             </div>
         </section>
 
+        <!--  IDEA:  colocar centralizado, no footer -->
         <section class="main__newsletter">
-            <h2 class="newsletter__title">Assine a nossa newsletter.</h2>
-            <p class="newsletter__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Incidunt voluptatem porro possimus.</p>
-            <form class="newsletter__form" action="">
-                <input class="newsletter__input" type="email" name="" id="">
-                <button class="newsletter__submit" type="submit">subscribe</button>
-            </form>
-            <div class="newsletter__info">
-                <i class="icon fa-solid fa-calendar-week"></i>
-                <p class="newsletter__info-text">artigos semanais</p>
+            <div class="newsletter__left">
+                <h2 class="newsletter__title">
+                    Assine a nossa newsletter e fique por dentro <br>
+                    de tudo o que acontece no mundo do esporte!
+                </h2>
+
+                <p class="newsletter__description">
+                    Receba em seu e-mail as últimas notícias, análises, entrevistas e <br> curiosidades sobre o seu esporte favorito.
+                </p>
+                <!--
+                    NOTE:  para telas menores
+                    <h2 class="newsletter__title">Assine a nossa newsletter.</h2>
+                    <p class="newsletter__description">Inscreva-se agora mesmo e não perca nada!</p>
+                -->
+
+                <form class="newsletter__form" action="#form">
+                    <input class="newsletter__input" type="email" placeholder="Seu e-mail" autocomplete="email">
+                    <button class="newsletter__submit" type="submit">Inscrever</button>
+                </form>
             </div>
-            <div class="newsletter__info">
-                <i class="icon fa-solid fa-hand"></i>
-                <p class="newsletter__info-text">sem spans</p>
+
+            <div class="newsletter__right">
+                <div class="newsletter__info">
+                    <i class="newsletter__icon fa-solid fa-calendar-week fa-2xl"></i>
+                    <p class="newsletter__info-title">Artigos semanais</p>
+                </div>
+
+                <div class="newsletter__info">
+                    <i class="newsletter__icon fa-solid fa-hand fa-2xl"></i>
+                    <p class="newsletter__info-title">Sem spans</p>
+                </div>
+
+                <div class="newsletter__info">
+                    <i class="newsletter__icon fa-solid fa-ban fa-2xl"></i>
+                    <p class="newsletter__info-title">Cancele quando quiser</p>
+                </div>
+
+                <div class="newsletter__info">
+                    <i class="newsletter__icon fa-solid fa-tags fa-2xl"></i>
+                    <p class="newsletter__info-title">Promoções exclusivas</p>
+                </div>
             </div>
         </section>
     </main>

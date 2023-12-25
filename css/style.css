@@ -272,3 +272,36 @@ body {
 .item__cta {
     font-size: 1.2rem;
 }
+
+.main__brands {
+    margin-inline: calc((var(--space1, 40px) * 2) * -1);
+    padding-block: var(--space1, 40px);
+    text-align: center;
+    background-color: var(--color3);
+    color: var(--color5);
+}
+
+.brands__title {
+    margin-bottom: var(--space1, 40px);
+}
+
+.brands {
+    display: flex;
+    gap: var(--space1, 40px);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space3, 10px);
+    text-decoration: none;
+    color: var(--color5);
+    transition: all .1s linear;
+}
+
+.brand:hover {
+    text-decoration: underline;
+    scale: 1.02;
+}

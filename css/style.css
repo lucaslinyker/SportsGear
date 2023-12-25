@@ -38,3 +38,38 @@ body {
     scrollbar-width: none;
     width: 0;
 } */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    gap: var(--space3, 10px);
+    background-color: var(--color1);
+    color: var(--color5);
+    padding-block: var(--space3, 10px);
+}
+
+.banner__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space4, 5px);
+}
+
+.banner__title {
+    font-weight: 500;
+}
+
+.banner__link {
+    color: var(--color5);
+}
+
+.banner__link:hover {
+    text-decoration: none;
+}
+
+.link {
+    display: block;
+}
+
+.link__image-black-friday {
+    width: 100%;
+}

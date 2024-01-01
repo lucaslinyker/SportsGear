@@ -111,14 +111,8 @@ body {
     color: var(--color0);
 }
 
-.content__title:hover {
-    cursor: pointer;
-    color: var(--color2);
-}
-
-.header__btn-menu:hover {
-    cursor: pointer;
-    color: var(--color2);
+.content__link:hover {
+    color: var(--color1);
 }
 
 .header__user-actions {

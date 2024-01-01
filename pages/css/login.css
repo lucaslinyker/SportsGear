@@ -37,7 +37,7 @@ body {
 .header {
     background-color: var(--color4);
     padding: var(--space2, 20px) var(--space1, 40px);
-    animation: show-header 1s linear;
+    animation: show-header .5s linear;
 }
 
 @keyframes show-header {
@@ -69,7 +69,7 @@ body {
     background-color: var(--color1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     transition: box-shadow .1s linear;
-    animation: show-main 1s linear, show-content 2s;
+    animation: show-main .5s linear, show-content 1s;
 }
 
 .main:hover {
@@ -115,6 +115,7 @@ body {
 }
 
 .main__aside:hover .aside__button {
+    cursor: pointer;
     color: var(--color4);
 }
 

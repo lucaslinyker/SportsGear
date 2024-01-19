@@ -15,7 +15,12 @@
         [ ] estudar sobre atributos aria (seo)
 -->
 <!--  TODO:  .jpg/.png -> .webp (seo) -->
-<body>
+<body onload="tamanho(window.innerWidth)">
+    <script src="JS/loading.js"></script>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
     <div class="banner">
         <div class="banner__item">
             <i class="banner__icon fa-solid fa-tag fa-flip-horizontal"></i>

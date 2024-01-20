@@ -294,6 +294,11 @@ body {
     font-size: 1.2rem;
 }
 
+.main__divider {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+}
+
 .main__brands {
     margin-inline: calc((var(--space1, 40px) * 2) * -1);
     padding-block: var(--space1, 40px);
@@ -667,7 +672,7 @@ body {
 
 .footer__divider {
     border: none;
-    border-top: var(--space5, 2px) solid var(--color0);
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .footer__copyright {

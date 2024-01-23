@@ -200,7 +200,7 @@ body {
 }
 
 .cart__link:hover {
-    color: var(--color3);
+    color: var(--color1);
 }
 
 .main {

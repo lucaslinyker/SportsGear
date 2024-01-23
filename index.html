@@ -295,10 +295,16 @@
         </section>
 
         <section class="main__black-friday">
-            <img class="black-friday__image" loading="lazy" src="images/evento/produtos.webp" alt="Produtos de esporte">
+            <picture>
+                <source class="black-friday__image" loading="lazy" media="(max-width: 308px)" srcset="images/evento/produtos/5.webp">
+                <source class="black-friday__image" loading="lazy" media="(max-width: 616px)" srcset="images/evento/produtos/4.webp">
+                <source class="black-friday__image" loading="lazy" media="(max-width: 1340px)" srcset="images/evento/produtos/3.webp">
+                <source class="black-friday__image" loading="lazy" media="(max-width: 2464px)" srcset="images/evento/produtos/2.webp">
+                <img class="black-friday__image" loading="lazy" src="images/evento/produtos/1.webp" alt="Produtos de esporte">
+            </picture>
 
             <div class="black-friday__content">
-                <h2 class="black-friday__title">Obtenha -50% da promoção <br> Black Friday</h2>
+                <h2 class="black-friday__title">Obtenha -50% da promoção Black Friday</h2>
 
                 <div class="black-friday__countdown">
                     <span class="countdown__num countdown__num--align">10</span> :

@@ -104,7 +104,6 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: var(--space2, 20px) var(--space1, 40px);
     background-color: var(--color4);
 }
@@ -324,7 +323,6 @@ body {
     display: flex;
     gap: var(--space1, 40px);
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .brand {
@@ -489,8 +487,6 @@ body {
     display: flex;
     gap: var(--space1, 40px);
     justify-content: space-between;
-    /*  NOTE:  telas menores justify-content: center; */
-    flex-wrap: wrap;
 }
 
 .card {

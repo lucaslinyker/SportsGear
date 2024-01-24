@@ -1,0 +1,314 @@
+:root {
+    --gap: 5px;
+    --height-bar: 2.5px;
+    --pos-y-bar-one: 0;
+    --pos-y-bar-three: 0;
+    --scale-bar: 1;
+    --rotate-bar-one: 0;
+    --rotate-bar-three: 0;
+    /*  NOTE:  for input/label of the menu */
+}
+
+@media (max-width: 1341px) {
+    .card:nth-last-child(-n+1) {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main__features {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        gap: 40px;
+    }
+
+    .feature:nth-last-child(-n+1) {
+        display: none;
+    }
+
+    .news__items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, .7fr);
+    }
+
+    .item--landscape1 {
+        grid-column: 1 / 3;
+    }
+
+    .item--landscape2 {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+    .item {
+        height: 100%;
+    }
+
+    .main__newsletter {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter__left {
+        grid-column: 1 / 3;
+    }
+
+    .newsletter__title {
+        grid-column: 1 / 3;
+    }
+
+    .newsletter__right {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .newsletter__form {
+        margin-bottom: var(--space2, 20px);
+    }
+}
+
+@media (max-width: 1035px) {
+    .card:nth-last-child(-n+1) {
+        display: block;
+    }
+
+    .blog__cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content__menu {
+        display: block;
+    }
+
+    .menu__input {
+        display: none;
+    }
+
+    .menu__label {
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .label__bar {
+        position: relative;
+        height: var(--height-bar);
+        width: 100%;
+        border-radius: .5rem;
+        background-color: var(--color0);
+    }
+
+    .label__bar--1 {
+        top: var(--pos-y-bar-one);
+        transform: rotate(var(--rotate-bar-one));
+        transition: top 200ms 100ms, transform 100ms;
+    }
+
+    .label__bar--2 {
+        transform: scaleX(var(--scale-bar));
+        transition: transform 150ms 100ms;
+    }
+
+    .label__bar--3 {
+        bottom: var(--pos-y-bar-three);
+        transform: rotate(var(--rotate-bar-three));
+        transition: bottom 200ms 100ms, transform 100ms;
+    }
+
+    .menu__input:checked + .menu__label > .label__bar--1 {
+        transition: top 200ms, transform 200ms 100ms;
+    }
+
+    .menu__input:checked + .menu__label > .label__bar--3 {
+        transition: bottom 200ms, transform 200ms 100ms;
+    }
+
+    .menu__input:checked + .menu__label {
+        --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+        --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+        --scale-bar: 0;
+        --rotate-bar-one: 45deg;
+        --rotate-bar-three: -45deg;
+    }
+
+    .content__nav,
+    .user-actions__nav {
+        display: none;
+    }
+
+    .main__black-friday {
+        height: 350px;
+        background-image: url(../images/evento/produtos/3.webp);
+    }
+
+    .main__features {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 40px;
+    }
+
+    .feature:nth-last-child(-n+1) {
+        display: flex;
+    }
+
+    .footer {
+        padding: var(--space2, 20px) var(--space2, 20px);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content);
+    }
+
+    .footer__sections {
+        grid-row: 2;
+    }
+
+    .footer__divider {
+        grid-row: 3;
+    }
+
+    .footer__copyright {
+        grid-row: 3;
+        margin-top: var(--space2, 20px);
+    }
+}
+
+@media (max-width: 850px) {
+    .best-sellers__products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product:nth-last-child(-n+2) {
+        display: none;
+    }
+}
+
+@media (max-width: 747px) {
+    .blog__cards {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 730px) {
+    .blog__cards {
+        justify-content: space-between;
+    }
+
+    .main {
+        padding: calc(var(--space1, 40px) / 2);
+    }
+
+    .news__items {
+        gap: var(--space2, 20px);
+    }
+
+    .main__features {
+        gap: var(--space2, 20px);
+    }
+
+    .main__brands {
+        margin-inline: calc(var(--space2, 20px) * -1);
+        padding-block: var(--space2, 20px);
+    }
+
+    .brands__title {
+        margin-bottom: var(--space2, 20px);
+    }
+
+    .brands {
+        gap: var(--space2, 20px);
+    }
+
+    .main__black-friday {
+        margin-inline: calc((var(--space3, 10px) * 2) * -1);
+    }
+}
+
+@media (max-width: 665px) {
+    .best-sellers__products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product:nth-last-child(-n+2) {
+        display: block;
+    }
+
+    .black-friday__content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 627px) {
+    .blog__cards {
+        justify-content: center;
+    }
+
+    .main__features {
+        grid-template-columns: repeat(1, max-content);
+        gap: var(--space2, 20px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .banner__description {
+        display: none;
+    }
+
+    .header {
+        padding: var(--space2, 20px) var(--space2, 20px);
+        align-items: center;
+        flex-direction: column;
+        gap: var(--space3, 10px);
+    }
+
+    .header__content, .header__user-actions, .search-cart {
+        width: 100%;
+    }
+
+    .header__content, .search-cart {
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .search__field {
+        width: calc(100% - 50px);
+    }
+
+    .brands {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+    }
+}
+
+@media (max-width: 460px) {
+    .main__black-friday {
+        height: 280px;
+    }
+
+    .footer__sections {
+        grid-template-columns: repeat(3, min-content);
+    }
+}
+
+@media (max-width: 415px) {
+    .black-friday__title {
+        font-size: 1.5rem;
+    }
+
+    .black-friday__countdown {
+        font-size: 2.5rem;
+    }
+
+    .countdown__date {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 393px) {
+    .main__best-sellers {
+        text-align: center;
+    }
+}

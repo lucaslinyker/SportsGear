@@ -312,7 +312,7 @@
 }
 
 @media (max-width: 393px) {
-    .main__best-sellers {
+    .best-sellers__title {
         text-align: center;
     }
 

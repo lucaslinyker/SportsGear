@@ -293,7 +293,11 @@
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 500px) {
+    .black-friday__content {
+        min-width: auto;
+    }
+
     .black-friday__title {
         font-size: 1.5rem;
     }
@@ -310,5 +314,9 @@
 @media (max-width: 393px) {
     .main__best-sellers {
         text-align: center;
+    }
+
+    .black-friday__countdown {
+        font-size: 2rem;
     }
 }

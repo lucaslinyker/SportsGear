@@ -26,6 +26,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
@@ -101,15 +105,15 @@ body {
     width: 100%;
 }
 
+.menu-mobile {
+    display: none;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     padding: var(--space2, 20px) var(--space1, 40px);
     background-color: var(--color4);
-}
-
-.content__menu {
-    display: none;
 }
 
 .nav__list {
@@ -143,6 +147,10 @@ body {
 
 .content__link:hover {
     color: var(--color1);
+}
+
+.menu__button {
+    display: none;
 }
 
 .header__user-actions {

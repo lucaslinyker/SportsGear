@@ -35,6 +35,40 @@
         </div>
     </div>
 
+    <section class="menu-mobile" id="menu-mobile">
+        <nav class="nav" id="nav">
+            <ul class="nav__list" id="nav-list">
+                <li class="nav__item" id="nav-item">
+                    <a class="nav__link" href="pages/login.html">Entrar</a>
+                </li>
+
+                <li class="nav__item" id="nav-item">
+                    <a class="nav__link" href="#signup">Criar conta</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="nav" id="nav">
+            <ul class="nav__list" id="nav-list">
+                <li class="nav__item" id="nav-item">
+                    <a class="nav__link" href="#masc">Masculino</a>
+                </li>
+
+                <li class="nav__item" id="nav-item">
+                    <a class="nav__link" href="#fem">Feminino</a>
+                </li>
+
+                <li class="nav__item" id="nav-item">
+                    <a class="nav__link" href="#kid">Infantil</a>
+                </li>
+
+                <li class="nav__item" id="nav-item">
+                    <a class="nav__link" href="#blog">Blog</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
     <header class="header">
         <div class="header__content">
             <a class="content__link" href="">
@@ -42,14 +76,9 @@
                 <h1 class="content__title" translate="no">Sports Gear</h1>
             </a>
 
-            <div class="content__menu">
-                <input class="menu__input" type="checkbox" name="menu" id="menu">
-                <label class="menu__label" for="menu">
-                    <div class="label__bar label__bar--1"></div>
-                    <div class="label__bar label__bar--2"></div>
-                    <div class="label__bar label__bar--3"></div>
-                </label>
-            </div>
+            <button class="menu__button" type="button" name="menu" id="menu">
+                <i class="fa-solid fa-bars fa-xl" id="menu-icon"></i>
+            </button>
 
             <nav class="content__nav">
                 <ul class="nav__list">
@@ -506,10 +535,7 @@
     </footer>
 
     <script src="JS/search.js"></script>
-    <!--
-         NOTE:  Comentado pois quebra a UI quando ativado
-        <script src="JS/menu.js"></script>
-    -->
+    <script src="JS/menu.js"></script>
     <script src="JS/newsletter.js"></script>
 
     <!--  IDEA:  mudar para o google -->

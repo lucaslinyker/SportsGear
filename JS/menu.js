@@ -1,13 +1,22 @@
-const menuInput = document.querySelector('.menu__input')
-const contentNav = document.querySelector('.content__nav')
-const userActionsNav = document.querySelector('.user-actions__nav')
+const btnMenu = document.getElementById('menu')
+const menuMobile = document.getElementById('menu-mobile')
+const navLink = Array.from(document.querySelectorAll('.nav__link'))
 
-menuInput.addEventListener('click', () => {
-    if (menuInput.checked) {
-        contentNav.style.display = 'block'
-        userActionsNav.style.display = 'block'
-    } else {
-        contentNav.style.display = 'none'
-        userActionsNav.style.display = 'none'
+btnMenu.addEventListener('click', () => {
+    menuMobile.style.display = menuMobile.style.display === 'block' ? 'none' : 'block'
+})
+
+document.addEventListener('click', (e) => {
+    if (
+        navLink.includes(e.target) ||
+        (!menuMobile.contains(e.target) && !btnMenu.contains(e.target)))
+    {
+        menuMobile.style.display = 'none'
+    }
+})
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1000) {
+        menuMobile.style.display = 'none'
     }
 })

@@ -77,62 +77,52 @@
 }
 
 @media (max-width: 1000px) {
-    .content__menu {
-        display: block;
+    .menu-mobile {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        padding: var(--space2, 20px);
+        border-radius: var(--border-radius2, 5px) 0 0 var(--border-radius2, 5px);
+        border: 1px solid var(--color1);
+        background-color: var(--color4);
+        box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, .2);
+        animation: showMenu .1s linear;
     }
 
-    .menu__input {
-        display: none;
+    @keyframes showMenu {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
     }
 
-    .menu__label {
-        width: 25px;
+    .menu-mobile .nav__list {
         display: flex;
         flex-direction: column;
-        gap: var(--gap);
+        gap: var(--space3, 10px);
+    }
+
+    .menu-mobile .nav:nth-child(1) {
+        margin-bottom: var(--space2, 20px);
+    }
+
+    .menu__button {
+        display: block;
+        border: none;
+        background-color: transparent;
         cursor: pointer;
+        transition: transform .1s linear;
+    }
+
+    .menu__button:active {
+        transform: scale(0.9);
+    }
+
+    .header {
         position: relative;
-    }
-
-    .label__bar {
-        position: relative;
-        height: var(--height-bar);
-        width: 100%;
-        border-radius: .5rem;
-        background-color: var(--color0);
-    }
-
-    .label__bar--1 {
-        top: var(--pos-y-bar-one);
-        transform: rotate(var(--rotate-bar-one));
-        transition: top 200ms 100ms, transform 100ms;
-    }
-
-    .label__bar--2 {
-        transform: scaleX(var(--scale-bar));
-        transition: transform 150ms 100ms;
-    }
-
-    .label__bar--3 {
-        bottom: var(--pos-y-bar-three);
-        transform: rotate(var(--rotate-bar-three));
-        transition: bottom 200ms 100ms, transform 100ms;
-    }
-
-    .menu__input:checked + .menu__label > .label__bar--1 {
-        transition: top 200ms, transform 200ms 100ms;
-    }
-
-    .menu__input:checked + .menu__label > .label__bar--3 {
-        transition: bottom 200ms, transform 200ms 100ms;
-    }
-
-    .menu__input:checked + .menu__label {
-        --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
-        --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
-        --scale-bar: 0;
-        --rotate-bar-one: 45deg;
-        --rotate-bar-three: -45deg;
     }
 
     .content__nav,

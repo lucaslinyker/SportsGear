@@ -183,6 +183,22 @@
 }
 
 @media (max-width: 730px) {
+    .header {
+        padding: var(--space2, 20px) var(--space2, 20px);
+        align-items: center;
+        flex-direction: column;
+        gap: var(--space3, 10px);
+    }
+
+    .header__content {
+        justify-content: space-between;
+    }
+
+    .header__content, .header__user-actions,
+    .header__user-actions > .container, .search__field {
+        width: 100%;
+    }
+
     .blog__cards {
         justify-content: space-between;
     }
@@ -246,26 +262,6 @@
 @media (max-width: 560px) {
     .banner__description {
         display: none;
-    }
-
-    .header {
-        padding: var(--space2, 20px) var(--space2, 20px);
-        align-items: center;
-        flex-direction: column;
-        gap: var(--space3, 10px);
-    }
-
-    .header__content, .header__user-actions, .search-cart {
-        width: 100%;
-    }
-
-    .header__content, .search-cart {
-        justify-content: space-between;
-        gap: 40px;
-    }
-
-    .search__field {
-        width: calc(100% - 50px);
     }
 
     .brands {

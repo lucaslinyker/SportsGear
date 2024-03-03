@@ -8,15 +8,15 @@ const passwordCorrect = localStorage.getItem('password')
 let users = []
 let dateFetch = 0
 async function requestBdUsers() {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL, { cache: 'no-cache' })
+    //  HACK:  process.env.NEXT_PUBLIC_API_URL
+    const response = await fetch('https://sports-gear-database.vercel.app/users', { cache: 'no-cache' })
     const data = await response.json().then(data => data.map(function (user) {
         return {
             email: user.email,
-            password: CryptoJS.AES.decrypt(user.password, process.env.NEXT_PUBLIC_CHAVE).toString(CryptoJS.enc.Utf8)
+            //  HACK:  process.env.NEXT_PUBLIC_CHAVE
+            password: CryptoJS.AES.decrypt(user.password, 'G*onDdpc7h.BTaUiDZ*96g;,mS-%m4W&').toString(CryptoJS.enc.Utf8)
         }
     }))
-
-    // console.log(data)
 
     dateFetch = Date.now()
     return users = data

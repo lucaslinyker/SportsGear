@@ -1,3 +1,6 @@
+//  HACK:  não funciona se não importar da cdn
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid'
+
 const frm = document.getElementById('form')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
@@ -17,44 +20,62 @@ const passwordMessage =
 
 const confirmPasswordMessage = 'As senhas não conferem'
 
-const successMessage = `Login realizado com sucesso!
+const userAlreadyExists = 'Email já cadastrado'
+
+const successMessage = `Cadastro realizado com sucesso!
 Você será redirecionado para a página inicial...`
 
-function validateFields(email, password, confirm) {
-    if (!regexEmail.test(email)) {
-        return alert(emailMessage)
-    }
+let users = []
+let dateFetch = 0
+async function requestBdUsers() {
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL, { cache: 'no-cache' })
+    const data = await response.json().then(data => data.map((user) => user.email))
+    console.log(data)
 
-    if (!regexPassword.test(password)) {
-        return alert(passwordMessage)
-    }
-
-    if (password !== confirm) {
-        confirmPassword.focus()
-        return alert(confirmPasswordMessage)
-        //  NOTE:  o alert é executado antes do focus
-    }
-
-    return success(email, password)
+    dateFetch = Date.now()
+    return users = data
 }
 
 function success(email, password) {
-    /* localStorage.setItem('email', email)
-    localStorage.setItem('password', password)
     localStorage.setItem('logged', true)
-     TODO:  implementar depois */
+    //  NOTE:  todos item do localStorage são strings
+
+    password = CryptoJS.AES.encrypt(password, process.env.NEXT_PUBLIC_CHAVE).toString()
+    console.log(password)
+
+    fetch(process.env.NEXT_PUBLIC_API_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email,
+            password,
+            id: uuidv4()
+        })
+    })
 
     alert(successMessage)
     return window.location.href = '/'
-    //  NOTE:  '/' aponta para o index
 }
 
-frm.addEventListener('submit', function (e) {
+frm.addEventListener('submit', async function (e) {
     e.preventDefault()
 
-    return validateFields(
-        email.value,
-        password.value,
-        confirmPassword.value
-    )
+    if (!regexEmail.test(email.value)) {
+        return alert(emailMessage)
+    } else if (!regexPassword.test(password.value)) {
+        return alert(passwordMessage)
+    } else if (password.value !== confirmPassword.value) {
+        confirmPassword.focus()
+        return alert(confirmPasswordMessage)
+    }
+
+    const dateSubmit = Date.now()
+    //  NOTE:  verifica se já passou 30 segundos desde a última requisição
+    if ((dateSubmit - dateFetch) > (1000 * 30)) await requestBdUsers()
+
+    if (users.some(user => user.email === email.value)) return alert(userAlreadyExists)
+
+    return success(email.value, password.value)
 })

@@ -1,36 +1,54 @@
 const frm = document.getElementById('form')
+const email = document.getElementById('email')
+const password = document.getElementById('password')
+
+const emailCorrect = localStorage.getItem('email')
+const passwordCorrect = localStorage.getItem('password')
+
+let users = []
+let dateFetch = 0
+async function requestBdUsers() {
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL, { cache: 'no-cache' })
+    const data = await response.json().then(data => data.map(function (user) {
+        return {
+            email: user.email,
+            password: CryptoJS.AES.decrypt(user.password, process.env.NEXT_PUBLIC_CHAVE).toString(CryptoJS.enc.Utf8)
+        }
+    }))
+
+    // console.log(data)
+
+    dateFetch = Date.now()
+    return users = data
+}
 
 function validateEmail(email) {
-    const re = /\S+@\S+\.\S+/
-    return re.test(email)
+    const regex = /\S+@\S+\.\S+/
+    return regex.test(email)
 }
 
 function validatePassword(password) {
-    const re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
-    return re.test(password)
+    const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+    return regex.test(password)
 }
 
-const invalidEmailMessage = 'Email inválido'
+const emailMessage = 'Email já em uso ou inexistente'
+const passwordMessage = 'Senha incorreta'
+const successMessage = `Login realizado com sucesso!\n\nVocê será redirecionado para a página inicial...`
 
-const invalidPasswordMessage =
-'A senha não atende aos seguintes requisitos:\n\n' +
-'A senha deve conter pelo menos 8 caracteres\n' +
-'A senha deve conter pelo menos uma letra maiúscula ou minúscula\n' +
-'A senha deve conter pelo menos um número\n' +
-'A senha deve conter pelo menos um caractere especial (@$!%*#?&)'
-
-const successMessage =
-'Login realizado com sucesso!\n\n' +
-'Você será redirecionado para a página inicial...'
-
-frm.addEventListener('submit', function (e) {
+frm.addEventListener('submit', async function (e) {
     e.preventDefault()
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
 
-    if (!validateEmail(email)) return alert(invalidEmailMessage)
-    if (!validatePassword(password)) return alert(invalidPasswordMessage)
+    if (!validateEmail(email.value)) return alert(emailMessage)
+    if (!validatePassword(password.value)) return alert(passwordMessage)
 
+    const dateSubmit = Date.now()
+    //  NOTE:  verifica se já passou 30 segundos desde a última requisição
+    if ((dateSubmit - dateFetch) > (1000 * 30)) await requestBdUsers()
+    if (!users.some(user => user.email === email.value)) return alert(emailMessage)
+    if (!users.some(user => user.password === password.value)) return alert(passwordMessage)
+
+    localStorage.setItem('logged', true)
     alert(successMessage)
-    window.location.href = '../index.html'
+    return window.location.href = '../'
 })

@@ -2,18 +2,19 @@ const frm = document.getElementById('form')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 
+//  BUG:  remover
 const emailCorrect = localStorage.getItem('email')
 const passwordCorrect = localStorage.getItem('password')
 
 let users = []
 let dateFetch = 0
 async function requestBdUsers() {
-    //  HACK:  process.env.NEXT_PUBLIC_API_URL
+    //  HACK:  deveria ser uma variável de ambiente
     const response = await fetch('https://sports-gear-database.vercel.app/users', { cache: 'no-cache' })
     const data = await response.json().then(data => data.map(function (user) {
         return {
             email: user.email,
-            //  HACK:  process.env.PUBLIC_CHAVE
+            //  HACK:  deveria ser uma variável de ambiente
             password: CryptoJS.AES.decrypt(user.password, 'G*onDdpc7h.BTaUiDZ*96g;,mS-%m4W&').toString(CryptoJS.enc.Utf8)
         }
     }))

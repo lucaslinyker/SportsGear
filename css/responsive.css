@@ -112,6 +112,7 @@
     .menu__button {
         display: block;
         border: none;
+        color: var(--color0);
         background-color: transparent;
         cursor: pointer;
         transition: transform .1s linear;

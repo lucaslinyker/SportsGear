@@ -13,7 +13,7 @@ async function requestBdUsers() {
     const data = await response.json().then(data => data.map(function (user) {
         return {
             email: user.email,
-            //  HACK:  process.env.NEXT_PUBLIC_CHAVE
+            //  HACK:  process.env.PUBLIC_CHAVE
             password: CryptoJS.AES.decrypt(user.password, 'G*onDdpc7h.BTaUiDZ*96g;,mS-%m4W&').toString(CryptoJS.enc.Utf8)
         }
     }))

@@ -28,7 +28,7 @@ Você será redirecionado para a página inicial...`
 let users = []
 let dateFetch = 0
 async function requestBdUsers() {
-    //  HACK:  process.env.NEXT_PUBLIC_API_URL
+    //  HACK:  process.env.PUBLIC_API_URL
     const response = await fetch('https://sports-gear-database.vercel.app/users', { cache: 'no-cache' })
     const data = await response.json().then(data => data.map((user) => user.email))
     console.log(data)
@@ -41,11 +41,11 @@ function success(email, password) {
     localStorage.setItem('logged', true)
     //  NOTE:  todos item do localStorage são strings
 
-    //  HACK:  process.env.NEXT_PUBLIC_CHAVE
+    //  HACK:  process.env.PUBLIC_CHAVE
     password = CryptoJS.AES.encrypt(password, 'G*onDdpc7h.BTaUiDZ*96g;,mS-%m4W&').toString()
     console.log(password)
 
-    //  HACK:  process.env.NEXT_PUBLIC_API_URL
+    //  HACK:  process.env.PUBLIC_API_URL
     fetch('https://sports-gear-database.vercel.app/users', {
         method: 'POST',
         headers: {

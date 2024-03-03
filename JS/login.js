@@ -2,10 +2,6 @@ const frm = document.getElementById('form')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 
-//  BUG:  remover
-const emailCorrect = localStorage.getItem('email')
-const passwordCorrect = localStorage.getItem('password')
-
 let users = []
 let dateFetch = 0
 async function requestBdUsers() {

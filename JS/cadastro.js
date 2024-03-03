@@ -45,7 +45,8 @@ function success(email, password) {
     password = CryptoJS.AES.encrypt(password, 'G*onDdpc7h.BTaUiDZ*96g;,mS-%m4W&').toString()
     console.log(password)
 
-    fetch(process.env.NEXT_PUBLIC_API_URL, {
+    //  HACK:  process.env.NEXT_PUBLIC_API_URL
+    fetch('https://sports-gear-database.vercel.app/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

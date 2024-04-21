@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/png">
+    <title>Sports Gear | Tênis Nike</title>
+    <link rel="stylesheet" href="../../css/product.css" media="all">
+    <link rel="stylesheet" href="../../css/responsive.css" media="(max-width: 1341px)">
+</head>
+<body>
+    <script src="../../JS/loading.js"></script>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="header">
+        <div class="header__content">
+            <a class="content__link" href="../../">
+                <h1 class="content__title" translate="no">Sports Gear</h1>
+            </a>
+
+            <button class="menu__button" type="button" name="menu" id="menu">
+                <i class="fa-solid fa-bars fa-xl" id="menu-icon"></i>
+            </button>
+
+            <nav class="content__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#masc">Masculino</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#fem">Feminino</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#kid">Infantil</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__user-actions">
+            <nav class="user-actions__nav" id="sign-in-up">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--pipe">
+                        <a class="nav__link" href="../login.html">Entrar</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="../cadastro.html">Criar conta</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="container">
+                <div class="search__field">
+                    <label class="search__label" id="mag" for="input-search">
+                        <i class="search__icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+
+                    <input class="search__input" id="input-search" type="text" placeholder="Buscar">
+                </div>
+
+                <div class="container">
+                    <a class="favorites" href="#favorites">
+                        <i class="favorites__icon fa-solid fa-heart"></i>
+                    </a>
+                    <a class="cart" href="#cart">
+                        <i class="cart__icon fa-solid fa-cart-shopping"></i>
+                        <span class="cart__number">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        Produto <strong>07</strong>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="../../JS/search.js"></script>
+    <script src="../../JS/menu.js"></script>
+    <script src="../../JS/requireFooter.js"></script>
+
+    <script src="https://kit.fontawesome.com/f567caf46e.js" crossorigin="anonymous"></script>
+</body>
+</html>

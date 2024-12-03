@@ -8,6 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="module">
+      const script = document.createElement('script');
+      script.src = import.meta.env.VITE_API_ICONS;
+      script.crossOrigin = 'anonymous';
+      document.head.appendChild(script);
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

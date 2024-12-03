@@ -8,4 +8,8 @@
   body {
     font-family: 'Roboto', sans-serif;
   }
+
+  :link:hover:not(:has(*)) {
+    text-decoration: underline;
+  }
 }

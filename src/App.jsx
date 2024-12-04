@@ -1,7 +1,20 @@
-function App() {
-  return (
-    <></>
-  )
-}
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom'
 
-export default App
+import { NotFound } from './pages/NotFound'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='*' element={<NotFound />} />
+    </>
+  )
+)
+
+export function App() {
+  return <RouterProvider router={router} />
+}

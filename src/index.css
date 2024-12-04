@@ -13,3 +13,7 @@
     text-decoration: underline;
   }
 }
+
+.custom-transition {
+  transition: color 0.3s, background-color 0.3s, transform 75ms;
+}

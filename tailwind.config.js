@@ -17,6 +17,14 @@ export default {
       screens: {
         xs: '380px',
       },
+      gridTemplateColumns: {
+        'repeat-1max': 'repeat(1, max-content)',
+        'repeat-2max': 'repeat(2, max-content)',
+        'repeat-3max': 'repeat(3, max-content)',
+      },
+      gridTemplateRows: {
+        'repeat-3max': 'repeat(3, max-content)',
+      },
       animation: {
         'show-header': 'show-header .5s ease-out',
         'show-main': 'show-main .5s ease-out, show-content 1s linear',

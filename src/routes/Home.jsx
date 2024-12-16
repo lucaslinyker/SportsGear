@@ -1,4 +1,10 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
+import { Banner } from '../components/Banner'
+import { Footer } from '../components/Footer'
+
+import * as blackFridayImages from '../assets/images/event/blackFriday/export.js'
 
 export function Home() {
   useEffect(() => {
@@ -9,6 +15,17 @@ export function Home() {
   }, [])
 
   return (
-    <></>
+    <>
+      <Banner />
+
+      <Link to='#black-friday'>
+        <picture>
+          <source media="(max-width: 640px)" srcSet={blackFridayImages.sm} />
+          <img src={blackFridayImages.base} alt='Black Friday' width={'100%'} />
+        </picture>
+      </Link>
+
+      <Footer />
+    </>
   )
 }

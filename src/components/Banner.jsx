@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 export function Banner() {
   return (
-    <div className='bg-color1 text-color5 py-2.5 text-center'>
+    <div className='bg-color1 text-color5 py-2.5 text-center flex justify-center'>
       <span className='inline-flex items-center gap-1'>
-        <i className='fa-solid fa-tag fa-flip-horizontal'></i>
+        <FontAwesomeIcon icon={faTag} flip='horizontal' />
         <p className='font-medium' translate='no'>
           Black Friday
         </p>

@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { MinimumHeader } from '../components/MinimumHeader'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 export function SignInUp({ title, action }) {
   useEffect(() => {
@@ -33,8 +35,8 @@ export function SignInUp({ title, action }) {
             type='button'
             disabled
           >
-            <i className='fa-brands fa-google fa-xl'></i>
-            <h2>{`${action} com o Google`}</h2>
+            <FontAwesomeIcon icon={faGoogle} size='lg' />
+            <h2 className='text-lg'>{`${action} com o Google`}</h2>
           </button>
         </aside>
 

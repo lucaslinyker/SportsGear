@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopyright } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 const social = [
-  { link: 'https://www.facebook.com/', icon: 'facebook' },
-  { link: 'https://www.instagram.com/', icon: 'instagram' },
-  { link: 'https://x.com/', icon: 'x-twitter' },
-  { link: 'https://www.youtube.com/', icon: 'youtube' },
+  { link: 'https://www.facebook.com/', icon: faFacebook },
+  { link: 'https://www.instagram.com/', icon: faInstagram },
+  { link: 'https://x.com/', icon: faXTwitter },
+  { link: 'https://www.youtube.com/', icon: faYoutube },
 ]
 
 const sections = [
@@ -35,15 +38,18 @@ export function Footer() {
           <ul className='social__list mx-0 mt-4 mb-5 flex gap-5'>
             {social.map(socialItem => {
               return (
-                <li key={socialItem.icon}>
+                <li key={socialItem.link}>
                   <Link
                     to={socialItem.link}
                     target='_blank'
                     rel='noopener noreferrer'
+                    className='flex items-center justify-center bg-color3 text-color5 rounded-full size-12'
                   >
-                    <i
-                      className={`size-12 rounded-full !flex justify-center items-center bg-color3 text-color5 transition-[font-size] duration-100 ease-linear hover:text-3xl fa-brands fa-${socialItem.icon} fa-lg`}
-                    ></i>
+                    <FontAwesomeIcon
+                      icon={socialItem.icon}
+                      size='lg'
+                      className='transition-[font-size] duration-100 ease-linear hover:text-3xl'
+                    />
                   </Link>
                 </li>
               )
@@ -86,8 +92,8 @@ export function Footer() {
       <hr className='border-black/50 row-start-3 lg:row-start-2 col-span-full' />
 
       <p className='row-start-3 lg:row-start-2 col-span-full mt-5 lg:mt-2'>
-        <i className='footer__icon fa-solid fa-copyright'></i> 2023 Sports Gear,
-        Inc. Todos os direitos reservados.
+        <FontAwesomeIcon icon={faCopyright} /> 2023 Sports Gear, Inc. Todos os
+        direitos reservados.
       </p>
     </footer>
   )

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Banner } from '../components/Banner'
+import { Main } from '../components/Main'
 import { Footer } from '../components/Footer'
 
 import * as blackFridayImages from '../assets/images/event/blackFriday/export.js'
@@ -24,6 +25,8 @@ export function Home() {
           <img src={blackFridayImages.base} alt='Black Friday' width={'100%'} />
         </picture>
       </Link>
+
+      <Main />
 
       <Footer />
     </>

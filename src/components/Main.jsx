@@ -1,6 +1,7 @@
 import { Features } from './Features.jsx'
 import { Brands } from './Brands.jsx'
 import { Newsletter } from './Newsletter.jsx'
+import { Event } from './Event.jsx'
 
 export function Main() {
   return (
@@ -9,6 +10,8 @@ export function Main() {
       <hr className='border-black/50' />
 
       <Brands />
+
+      <Event />
 
       <Newsletter />
     </main>

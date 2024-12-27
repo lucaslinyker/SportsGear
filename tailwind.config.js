@@ -18,6 +18,7 @@ export default {
         'repeat-1max': 'repeat(1, max-content)',
         'repeat-2max': 'repeat(2, max-content)',
         'repeat-3max': 'repeat(3, max-content)',
+        background: '.7fr 15px 1fr 15px 1fr 15px 1fr',
       },
       gridTemplateRows: {
         'repeat-3max': 'repeat(3, max-content)',
@@ -37,6 +38,7 @@ export default {
       boxShadow: {
         1: '0 0 10px 0 rgba(0, 0, 0, 0.3)',
         2: '0 0 13px 1px rgba(0, 0, 0, 0.3)',
+        6: '2px 5px 10px rgba(3, 25, 39, 0.3)',
       },
     },
   },

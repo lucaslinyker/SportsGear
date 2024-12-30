@@ -38,6 +38,8 @@ export default {
       boxShadow: {
         1: '0 0 10px 0 rgba(0, 0, 0, 0.3)',
         2: '0 0 13px 1px rgba(0, 0, 0, 0.3)',
+        4: '0 0 10px 2px rgba(0, 0, 0, 0.3)',
+        5: '0 0 10px 2px rgba(0, 0, 0, 0.4)',
         6: '2px 5px 10px rgba(3, 25, 39, 0.3)',
       },
     },

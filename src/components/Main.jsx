@@ -4,6 +4,7 @@ import { Newsletter } from './Newsletter.jsx'
 import { Event } from './Event.jsx'
 import { Categories } from './Categories.jsx'
 import { PostsBlog } from './PostsBlog.jsx'
+import { BestSellers } from './BestSellers.jsx'
 
 export function Main() {
   return (
@@ -14,6 +15,8 @@ export function Main() {
       <Categories />
 
       <Brands />
+
+      <BestSellers />
 
       <Event />
 

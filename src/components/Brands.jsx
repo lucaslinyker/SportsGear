@@ -12,7 +12,7 @@ export function Brands() {
         Algumas de nossas melhores marcas do esporte
       </h2>
 
-      <div className='grid grid-cols-repeat-2max sm:grid-cols-none sm:flex gap-5 md:gap-10 justify-evenly'>
+      <div className='grid grid-cols-repeat-2max sm:grid-cols-none sm:flex gap-5 md:gap-10 justify-evenly flex-wrap'>
         {brands.map((brand, index) => (
           <Link
             key={index}

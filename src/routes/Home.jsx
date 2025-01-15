@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Banner } from '../components/Banner'
+import { Header } from '../components/Header'
 import { Main } from '../components/Main'
 import { Footer } from '../components/Footer'
 
@@ -18,6 +19,8 @@ export function Home() {
   return (
     <>
       <Banner />
+
+      <Header />
 
       <Link to='#black-friday'>
         <picture>

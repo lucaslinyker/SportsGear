@@ -26,6 +26,7 @@ export default {
       animation: {
         'show-header': 'show-header .5s ease-out',
         'show-main': 'show-main .5s ease-out, show-content 1s linear',
+        'show-menu': 'show-menu .2s linear',
       },
       keyframes: {
         'show-header': {
@@ -34,10 +35,14 @@ export default {
         'show-main': {
           '0%': { left: '-100%' },
         },
+        'show-menu': {
+          '0%': { transform: 'translate(100%)' },
+        },
       },
       boxShadow: {
         1: '0 0 10px 0 rgba(0, 0, 0, 0.3)',
         2: '0 0 13px 1px rgba(0, 0, 0, 0.3)',
+        3: '1px 1px 10px 5px rgba(0, 0, 0, 0.2)',
         4: '0 0 10px 2px rgba(0, 0, 0, 0.3)',
         5: '0 0 10px 2px rgba(0, 0, 0, 0.4)',
         6: '2px 5px 10px rgba(3, 25, 39, 0.3)',

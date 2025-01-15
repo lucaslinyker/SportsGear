@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+    <title>Sports Gear | Login</title>
+    <link rel="stylesheet" href="../css/login.css" media="all">
+</head>
+<body>
+    <header class="header">
+        <a class="header__link" href="../">
+            <h1 class="header__title" translate="no">Sports Gear</h1>
+        </a>
+    </header>
+
+    <main class="main">
+        <h1 class="main__title">Faça login na sua conta</h1>
+
+        <aside class="main__aside">
+            <!--  NOTE:  ainda não tenho conhecimentos para fazer login com o google -->
+            <button class="aside__button" type="button" disabled>
+                <i class="aside__icon fa-brands fa-google fa-xl"></i>
+                <h2 class="aside__text">Entrar com o Google</h2>
+            </button>
+        </aside>
+
+        <section class="main__divider">
+            <hr class="divider__hr">
+            <p class="divider__text">ou</p>
+            <hr class="divider__hr">
+        </section>
+
+        <form class="main__form" id="form" autocomplete="on">
+            <label class="form__label" for="email">E-mail:</label>
+            <input class="form__input" type="email" id="email" placeholder="seu.email@gmail.com" required autocomplete="email">
+
+            <label class="form__label" for="password">Senha:</label>
+            <input class="form__input" type="password" id="password" placeholder="91nu7#ww" required autocomplete="current-password" minlength="8">
+
+            <button class="form__button" type="submit">Entrar</button>
+
+            <div class="form__links">
+                <a class="form__link" href="#reset">Esqueci a senha</a>
+                <a class="form__link" href="cadastro.html">Não tem uma conta?</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="../JS/login.js"></script>
+
+    <script src="https://kit.fontawesome.com/f567caf46e.js" crossorigin="anonymous"></script>
+</body>
+</html>

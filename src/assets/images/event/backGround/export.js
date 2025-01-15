@@ -1,0 +1,5 @@
+export { default as xl } from './xl.webp'
+export { default as lg } from './lg.webp'
+export { default as base } from './base.webp'
+export { default as sm } from './sm.webp'
+export { default as xs } from './xs.webp'

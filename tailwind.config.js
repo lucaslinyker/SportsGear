@@ -35,6 +35,9 @@ export default {
         'show-main': {
           '0%': { left: '-100%' },
         },
+        'show-content': {
+          '0%': { opacity: 0 },
+        },
         'show-menu': {
           '0%': { transform: 'translate(100%)' },
         },
@@ -51,4 +54,3 @@ export default {
   },
   plugins: [],
 }
-
